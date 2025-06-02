@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <style>
+        .js-bg {
+            fill: #f7df1e;
+        }
+        .js-text {
+            fill: #000000;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 60px;
+        }
+    </style>
+    
+    <!-- JS Logo -->
+    <rect x="5" y="5" width="90" height="90" class="js-bg" />
+    <text x="25" y="70" class="js-text">JS</text>
+</svg>
