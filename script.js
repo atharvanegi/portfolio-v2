@@ -656,3 +656,20 @@ document.addEventListener('DOMContentLoaded', function() {
     'color: #64ffda; font-size: 14px;'
     );
 });
+// ==================== SHOW MORE — CERTIFICATIONS ====================
+document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('certsToggleBtn');
+    if (!btn) return;
+    var extras = document.querySelectorAll('#certsGrid .hidden-cert');
+
+    btn.addEventListener('click', function() {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        extras.forEach(function(el) {
+            el.classList.toggle('visible', !expanded);
+        });
+        btn.setAttribute('aria-expanded', String(!expanded));
+        btn.innerHTML = expanded
+            ? 'Show All Certifications <i class="fas fa-chevron-down" aria-hidden="true"></i>'
+            : 'Show Less <i class="fas fa-chevron-down" aria-hidden="true"></i>';
+    });
+});
